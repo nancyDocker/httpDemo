@@ -8,9 +8,9 @@ RUN sed -i "s/archive\.ubuntu\.com/mirrors\.163\.com/g" /etc/apt/sources.list \
         && apt-get install -y python-pip \
         && pip install -i http://pypi.douban.com/simple requests \
         && apt-get clean
-
-COPY ./test.py /test.py
+RUN echo "Hello World"
+#COPY ./test.py /test.py
 
 EXPOSE 80
 
-CMD ["python", "/test.py"]
+#CMD ["python", "/test.py"]
